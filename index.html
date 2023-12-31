@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="./jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
+    <script>
+        AOS.init({ once: true });
+    </script>
     <header></header>
     <main>
-        <section id="videobanner">
+        <section id="videobanner" style="display:none">
             <div class="videoslider">
                 <video autoplay playsinline muted loop preload poster="./assets/img/poster.png">
                     <source src="./assets/img/1080p.mp4" />
@@ -19,7 +25,6 @@
             </div>
         </section>
         <section id="mine">
-
             <div class="top">
                 <div class="right" style="width: 40%;"></div>
                 <div class="left" style="width: 60%;">
@@ -69,7 +74,6 @@
             </figure>
         </section>
         <section id="metalmine">
-
             <div class="top">
                 <div class="right" style="width: 55%;">
                     <div class="minecontent">
@@ -107,34 +111,133 @@
                 </div>
             </div>
         </section>
-        <section id="export">
-            <div class="slider4image">
-                <div class="image"></div>
-                <div class="image">
-                    <img src="./assets/img/1x/4img.png" alt="">
-                </div>
-                <div class="image">
-                    <img src="./assets/img/1x/4img.png" alt="">
-                </div>
-                <div class="image">
-                    <img src="./assets/img/1x/4img.png" alt="">
-                </div>
-                <div class="image">
-                    <img src="./assets/img/1x/4img.png" alt="">
+        <section id="export" class="parallax">
+            <div class="container-fluid" data-aos="zoom-in" data-aos-easing="ease-in-back" data-aos-delay="50"
+                data-aos-offset="0">
+                <div class="row diagonals">
+
+                    <div class="sliderwrapper">
+                        <div class="inner1" data-aos="fade-right" data-aos-easing="ease-in-back" data-aos-delay="50"
+                            data-aos-offset="0">
+                        </div>
+                    </div>
+                    <div class="sliderwrapper center">
+                        <div class="inner2" data-aos="fade-right" data-aos-easing="ease-in-back" data-aos-delay="250"
+                            data-aos-offset="0">
+                        </div>
+                    </div>
+                    <div class="sliderwrapper center">
+                        <div class="inner2" data-aos="fade-right" data-aos-easing="ease-in-back" data-aos-delay="450"
+                            data-aos-offset="0">
+                        </div>
+                    </div>
+                    <div class="sliderwrapper">
+                        <div class="inner3" data-aos="fade-right" data-aos-easing="ease-in-back" data-aos-delay="650"
+                            data-aos-offset="0">
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
-        <section id="compare"></section>
-        <section id="company"></section>
-        <section id="news"></section>
-        <section id="teambanner"></section>
+
+        <section id="compare">
+            <div class="top">
+                <div class="right" style="width: 61%;"></div>
+                <div class="left" style="width: 39%;">
+                    <div class="minecontent">
+                        <figure>
+                            <img src="./assets/img/1x/com-l.png" alt="mine">
+                            <figcaption class="diagonal">
+                                <div>
+                                    <h3>سنگ مرمر</h3>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="beneath">
+                <div class="right" style="width: 65.5%;">
+                    <div class="wrapper">
+                        <img src="./assets/img/1x/comp-r.png" alt="">
+                    </div>
+                </div>
+                <div class="left" style="width: 34.5%;"></div>
+            </div>
+        </section>
+        <section id="company">
+            <div class="videoplayercompany">
+                <video autoplay playsinline muted loop preload poster="./assets/img/poster.png">
+                    <source src="./assets/img/1080p.mp4" />
+                </video>
+                <div class="overlay">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt hic aliquid dolor ipsam vero ab
+                        nemo sequi soluta doloribus deserunt. Praesentium soluta impedit ad eum vero fugit illo sed in?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt hic aliquid dolor ipsam vero ab
+                        nemo sequi soluta doloribus deserunt. Praesentium soluta impedit ad eum vero fugit illo sed in?
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="news">
+            <div class="top">
+                <div class="right"></div>
+                <div class="left" style="width: 55%;">
+                    <div class="graynews">
+                        <img src="./assets/img/1x/backgray.png" alt="mine">
+                        <div class="newscontent">
+                            <div>
+                                <h3>سنگ مرمر</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="beneath">
+                <div class="right" style="width: 55%;">
+                    <div class="bluenews">
+                        <img src="./assets/img/1x/backblue.png" alt="mine">
+                        <div class="newscontent">
+                            <div>
+                                <h3>سنگ مرمر</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="left"></div>
+            </div>
+        </section>
+        <section id="teambanner">
+            <img src="./assets/img/1x/teambanner.png" alt="">
+        </section>
     </main>
     <footer>
-        <div class="footerlogo"></div>
-        <div class="contact"></div>
-        <div class="social"></div>
-        <div class="copyright"></div>
+        <div class="footerlogo">
+            <img src="./assets/img/1x/footerlogo.png" alt="">
+        </div>
+        <div class="contact">
+            <p><img src="./assets/img/1x/footerpin.png" alt=""><span class="phone">0912 1234567</span><img src="./assets/img/1x/footerpin.png" alt=""><span class="address">تهران - میدان ولیعصر</span></p>
+        </div>
+        <div class="social">
+            <a href="#">
+                <img src="./assets/img/1x/footersocial.png" alt="">
+            </a>
+            <a href="#">
+                <img src="./assets/img/1x/footersocial.png" alt="">
+            </a>
+            <a href="#">
+                <img src="./assets/img/1x/footersocial.png" alt="">
+            </a>
+            <a href="#">
+                <img src="./assets/img/1x/footersocial.png" alt="">
+            </a>
+        </div>
+        <div class="copyright">کلیه حقوق متعلق به وبسایت میباشد.</div>
     </footer>
+    <script src="./jquery.appear.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
