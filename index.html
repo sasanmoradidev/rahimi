@@ -5,20 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="./jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <script>
         AOS.init({ once: true });
     </script>
-    <header></header>
+    <header>
+        <div class="headgroup">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbar-content">
+                        <div class="hamburger-toggle">
+                            <div class="hamburger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbar-content">
+                        <div class="headlogo ms-auto">
+                            <img src="./assets/img/1x/logo.png" alt="logo">
+                        </div>
+                        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+
+                            <li class="nav-item dropdown dropdown-mega position-static">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                    data-bs-auto-close="outside">Megamenu</a>
+                                <div class="dropdown-menu shadow">
+                                    <div class="mega-content">
+                                        <div class="container-fluid">
+                                            <div class="row w-100">
+                                                <div class="col-3 g-0">
+                                                    <ul class="levelone">
+                                                        <li>
+                                                            <a href="#">معادن</a>
+                                                            <ul>
+                                                                <li><a href="#" data-img="./assets/img/1x/one.png"> یک</a></li>
+                                                                <li><a href="#" data-img="./assets/img/1x/two.png"> دو</a></li>
+                                                                <li><a href="#" data-img="./assets/img/1x/three.png"> سه</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">استخراج</a>
+                                                            <ul>
+                                                                <li><a href="#"> چهار</a></li>
+                                                                <li><a href="#"> پنج</a></li>
+                                                                <li><a href="#"> شیش</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">سنگ معدن</a>
+                                                            <ul>
+                                                                <li><a href="#"> هفت</a></li>
+                                                                <li><a href="#"> هشت</a></li>
+                                                                <li><a href="#"> نه</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-3 g-0">
+                                                    <div class="menulist"></div>
+                                                </div>
+                                                <div class="col-6 g-0">
+                                                    <div class="linkimage">
+                                                        <img src="./assets/img/1x/temp.png" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
     <main>
-        <section id="videobanner" style="display:none">
-            <div class="videoslider">
+        <section id="videobanner">
+            <div id="videoslider">
                 <video autoplay playsinline muted loop preload poster="./assets/img/poster.png">
                     <source src="./assets/img/1080p.mp4" />
                 </video>
@@ -27,7 +101,7 @@
         <section id="mine">
             <div class="top">
                 <div class="right" style="width: 40%;"></div>
-                <div class="left" style="width: 60%;">
+                <div class="left" style="width: 59%;">
                     <div class="minecontent">
                         <figure>
                             <img src="./assets/img/1x/mine.png" alt="mine">
@@ -112,7 +186,7 @@
             </div>
         </section>
         <section id="export" class="parallax">
-            <div class="container-fluid" data-aos="zoom-in" data-aos-easing="ease-in-back" data-aos-delay="50"
+            <div class="aoscontainer-fluid" data-aos="zoom-in" data-aos-easing="ease-in-back" data-aos-delay="50"
                 data-aos-offset="0">
                 <div class="row diagonals">
 
@@ -218,7 +292,8 @@
             <img src="./assets/img/1x/footerlogo.png" alt="">
         </div>
         <div class="contact">
-            <p><img src="./assets/img/1x/footerpin.png" alt=""><span class="phone">0912 1234567</span><img src="./assets/img/1x/footerpin.png" alt=""><span class="address">تهران - میدان ولیعصر</span></p>
+            <p><img src="./assets/img/1x/footerpin.png" alt=""><span class="phone">0912 1234567</span><img
+                    src="./assets/img/1x/footerpin.png" alt=""><span class="address">تهران - میدان ولیعصر</span></p>
         </div>
         <div class="social">
             <a href="#">
@@ -237,6 +312,7 @@
         <div class="copyright">کلیه حقوق متعلق به وبسایت میباشد.</div>
     </footer>
     <script src="./jquery.appear.js"></script>
+    <script src="./bootstrap.bundle.min.js"></script>
     <script src="./script.js"></script>
 </body>
 
