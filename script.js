@@ -16,6 +16,16 @@ $(function () {
     $("#mine").appear();
     // end Video appearence play/pause
 
+    $('.fadeslider').slick({
+        dots: false,
+        rtl: true,
+        arrows: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+      });
+
     // get header height for video banner
     const height = $('header').height();
     $( window ).on( "load resize", function() {

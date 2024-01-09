@@ -9,12 +9,16 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="./jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/slick/slick-theme.css" />
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <script>
-        AOS.init({ once: true });
+        AOS.init({
+            // once: true
+        });
     </script>
     <header>
         <div class="headgroup">
@@ -48,9 +52,12 @@
                                                         <li>
                                                             <a href="#">معادن</a>
                                                             <ul>
-                                                                <li><a href="#" data-img="./assets/img/1x/one.png"> یک</a></li>
-                                                                <li><a href="#" data-img="./assets/img/1x/two.png"> دو</a></li>
-                                                                <li><a href="#" data-img="./assets/img/1x/three.png"> سه</a></li>
+                                                                <li><a href="#" data-img="./assets/img/1x/one.png">
+                                                                        یک</a></li>
+                                                                <li><a href="#" data-img="./assets/img/1x/two.png">
+                                                                        دو</a></li>
+                                                                <li><a href="#" data-img="./assets/img/1x/three.png">
+                                                                        سه</a></li>
                                                             </ul>
                                                         </li>
                                                         <li>
@@ -92,6 +99,7 @@
     </header>
     <main>
         <section id="videobanner">
+            <div class="overlay"></div>
             <div id="videoslider">
                 <video autoplay playsinline muted loop preload poster="./assets/img/poster.png">
                     <source src="./assets/img/1080p.mp4" />
@@ -106,7 +114,7 @@
                         <figure>
                             <img src="./assets/img/1x/mine.png" alt="mine">
                             <figcaption class="diagonal">
-                                <div>
+                                <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                     <h3>استخراج سنگ</h3>
                                     <p>تخصص و دقت در استخراج سنگ از معادن</p>
                                 </div>
@@ -138,7 +146,7 @@
         </section>
         <section id="refine">
             <figure>
-                <img src="./assets/img/1x/refine.png" alt="refine">
+                <img src="./assets/img/1x/refine.png" alt="refine" class="transition_zoom_in">
                 <figcaption class="diagonal">
                     <div>
                         <h3>استخراج سنگ</h3>
@@ -154,7 +162,7 @@
                         <figure>
                             <img src="./assets/img/1x/metalmine.png" alt="metalmine">
                             <figcaption class="diagonal">
-                                <div>
+                                <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                     <h3>استخراج سنگ</h3>
                                     <p>تخصص و دقت در استخراج سنگ از معادن</p>
                                 </div>
@@ -216,28 +224,82 @@
         </section>
 
         <section id="compare">
-            <div class="top">
-                <div class="right" style="width: 61%;"></div>
-                <div class="left" style="width: 39%;">
-                    <div class="minecontent">
-                        <figure>
-                            <img src="./assets/img/1x/com-l.png" alt="mine">
-                            <figcaption class="diagonal">
-                                <div>
-                                    <h3>سنگ مرمر</h3>
-                                </div>
-                            </figcaption>
-                        </figure>
+            <div class="fadeslider">
+                <div class="slide">
+                    <div class="top">
+                        <div class="right" style="width: 61%;"></div>
+                        <div class="left" style="width: 39%;">
+                            <div class="minecontent">
+                                <figure>
+                                    <img src="./assets/img/1x/com-l.png" alt="mine">
+                                    <figcaption class="diagonal">
+                                        <div>
+                                            <h3>سنگ مرمر</h3>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="beneath">
+                        <div class="right" style="width: 65.5%;">
+                            <div class="wrapper">
+                                <img src="./assets/img/1x/comp-r.png" alt="">
+                            </div>
+                        </div>
+                        <div class="left" style="width: 34.5%;"></div>
                     </div>
                 </div>
-            </div>
-            <div class="beneath">
-                <div class="right" style="width: 65.5%;">
-                    <div class="wrapper">
-                        <img src="./assets/img/1x/comp-r.png" alt="">
+                <div class="slide">
+                    <div class="top">
+                        <div class="right" style="width: 61%;"></div>
+                        <div class="left" style="width: 39%;">
+                            <div class="minecontent">
+                                <figure>
+                                    <img src="./assets/img/1x/com-l.png" alt="mine">
+                                    <figcaption class="diagonal">
+                                        <div>
+                                            <h3>سنگ خارا</h3>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="beneath">
+                        <div class="right" style="width: 65.5%;">
+                            <div class="wrapper">
+                                <img src="./assets/img/1x/comp-r.png" alt="">
+                            </div>
+                        </div>
+                        <div class="left" style="width: 34.5%;"></div>
                     </div>
                 </div>
-                <div class="left" style="width: 34.5%;"></div>
+                <div class="slide">
+                    <div class="top">
+                        <div class="right" style="width: 61%;"></div>
+                        <div class="left" style="width: 39%;">
+                            <div class="minecontent">
+                                <figure>
+                                    <img src="./assets/img/1x/com-l.png" alt="mine">
+                                    <figcaption class="diagonal">
+                                        <div>
+                                            <h3>سنگ آذرین</h3>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="beneath">
+                        <div class="right" style="width: 65.5%;">
+                            <div class="wrapper">
+                                <img src="./assets/img/1x/comp-r.png" alt="">
+                            </div>
+                        </div>
+                        <div class="left" style="width: 34.5%;"></div>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="company">
@@ -311,8 +373,10 @@
         </div>
         <div class="copyright">کلیه حقوق متعلق به وبسایت میباشد.</div>
     </footer>
+    <script type="text/javascript" src="./assets/slick/jquery-migrate-1.2.1.min.js"></script>
     <script src="./jquery.appear.js"></script>
     <script src="./bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./assets/slick/slick.min.js"></script>
     <script src="./script.js"></script>
 </body>
 
