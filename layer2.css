@@ -1048,6 +1048,10 @@ li {
     --blue: #00528c;
 }
 
+.mr-auto {
+    margin-right: auto;
+}
+
 Body {
     font-family: iransansweb;
 }
@@ -1633,7 +1637,7 @@ section#overslider:after {
 }
 
 .leftcaption p {
-    font-size: 14px;
+    /* font-size: 14px; */
     line-height: 20px;
 }
 
@@ -1660,7 +1664,7 @@ section#overslider:after {
 
 .text {
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 2rem;
     color: rgb(250 250 250 / 70%);
 }
 
@@ -1710,20 +1714,22 @@ section#backlist:after {
 }
 
 /* comparison section */
-#comparison img{
+#comparison img {
     width: 100%;
 }
+
 .cd-image-container {
     position: relative;
     width: 90%;
     max-width: 768px;
     margin: 0em auto;
-  }
-  .cd-image-container img {
+}
+
+.cd-image-container img {
     display: block;
-  }
-  
-  .cd-image-label {
+}
+
+.cd-image-label {
     display: none;
     position: absolute;
     bottom: 0;
@@ -1741,20 +1747,22 @@ section#backlist:after {
     -webkit-transition: -webkit-transform 0.3s 0.7s, opacity 0.3s 0.7s;
     -moz-transition: -moz-transform 0.3s 0.7s, opacity 0.3s 0.7s;
     transition: transform 0.3s 0.7s, opacity 0.3s 0.7s;
-  }
-  .cd-image-label.is-hidden {
+}
+
+.cd-image-label.is-hidden {
     visibility: hidden;
-  }
-  .is-visible .cd-image-label {
+}
+
+.is-visible .cd-image-label {
     opacity: 1;
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transform: translateY(0);
-  }
-  
-  .cd-resize-img {
+}
+
+.cd-resize-img {
     position: absolute;
     top: 0;
     left: 0;
@@ -1769,8 +1777,9 @@ section#backlist:after {
     transform: translateZ(0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-  }
-  .cd-resize-img img {
+}
+
+.cd-resize-img img {
     position: absolute;
     left: 0;
     top: 0;
@@ -1778,53 +1787,64 @@ section#backlist:after {
     height: 100%;
     width: auto;
     max-width: none;
-  }
-  .cd-resize-img .cd-image-label {
+}
+
+.cd-resize-img .cd-image-label {
     right: auto;
     left: 0;
-  }
-  .is-visible .cd-resize-img {
+}
+
+.is-visible .cd-resize-img {
     width: 50%;
     /* bounce in animation of the modified image */
     -webkit-animation: cd-bounce-in 0.7s;
     -moz-animation: cd-bounce-in 0.7s;
     animation: cd-bounce-in 0.7s;
-  }
-  
-  @-webkit-keyframes cd-bounce-in {
+}
+
+@-webkit-keyframes cd-bounce-in {
     0% {
-      width: 0;
+        width: 0;
     }
+
     60% {
-      width: 55%;
+        width: 55%;
     }
+
     100% {
-      width: 50%;
+        width: 50%;
     }
-  }
-  @-moz-keyframes cd-bounce-in {
+}
+
+@-moz-keyframes cd-bounce-in {
     0% {
-      width: 0;
+        width: 0;
     }
+
     60% {
-      width: 55%;
+        width: 55%;
     }
+
     100% {
-      width: 50%;
+        width: 50%;
     }
-  }
-  @keyframes cd-bounce-in {
+}
+
+@keyframes cd-bounce-in {
     0% {
-      width: 0;
+        width: 0;
     }
+
     60% {
-      width: 55%;
+        width: 55%;
     }
+
     100% {
-      width: 50%;
+        width: 50%;
     }
-  }
-  .cd-handle {
+}
+
+.cd-handle {
     position: absolute;
     height: 44px;
     width: 44px;
@@ -1843,12 +1863,14 @@ section#backlist:after {
     -ms-transform: translate3d(0, 0, 0) scale(0);
     -o-transform: translate3d(0, 0, 0) scale(0);
     transform: translate3d(0, 0, 0) scale(0);
-  }
-  .cd-handle.draggable {
+}
+
+.cd-handle.draggable {
     /* change background color when element is active */
     background-color: #445b7c;
-  }
-  .is-visible .cd-handle {
+}
+
+.is-visible .cd-handle {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0) scale(1);
     -moz-transform: translate3d(0, 0, 0) scale(1);
@@ -1858,6 +1880,129 @@ section#backlist:after {
     -webkit-transition: -webkit-transform 0.3s 0.7s, opacity 0s 0.7s;
     -moz-transition: -moz-transform 0.3s 0.7s, opacity 0s 0.7s;
     transition: transform 0.3s 0.7s, opacity 0s 0.7s;
-  }
-  
+}
+
+#comparison {
+    padding-bottom: 60px;
+}
+
 /* comparison section */
+
+/* panels */
+.panels {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.panels .panel {
+    background: #6B0F9C;
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    align-items: center;
+    transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.panels .panel.panel1 {
+    background-image: url(./assets/img/1x/panelone.png);
+}
+
+.panels .panel.panel2 {
+    background-image: url(./assets/img/1x/paneltwo.png);
+}
+
+.panels .panel.panel3 {
+    background-image: url(./assets/img/1x/panelthree.png);
+}
+
+.panels .panel.panel4 {
+    background-image: url(./assets/img/1x/panelfour.png);
+}
+
+.panels .panel.panel5 {
+    background-image: url(./assets/img/1x/panelfive.png);
+}
+
+.panels .panel>* {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panels .panel>*:first-child {
+    transform: translateY(30%);
+}
+
+.panels .panel>*:last-child {
+    transform: translateY(0%);
+}
+
+.panels .panel.open-active>*:first-child {
+    transform: translateY(0);
+}
+
+.panels .panel.open-active>*:last-child {
+    transform: translateY(0);
+}
+
+.panels .panel.open {
+    font-size: 40px;
+    flex: 5;
+}
+
+.panels .panel p {
+    text-transform: uppercase;
+    font-size: 36px;
+}
+
+.panels .panel p:nth-child(2) {
+    font-size: 14px;
+}
+
+.cta {
+    color: white;
+    text-decoration: none;
+}
+
+#panels {
+    padding-top: 60px;
+}
+
+/* panels */
+
+section#tarash {
+    padding-top: 110px;
+}
+
+.lefttxt h2 {
+    font-size: 22px;
+    color: var(--blue);
+    padding: 50px 0;
+}
+
+.lefttxt {
+    text-align: right;
+}
+
+.lefttxt p {
+    width: 70%;
+    line-height: 24px;
+}
+
+#teambanner img {
+    max-width: 100%;
+}

@@ -1,0 +1,28 @@
+
+/* responsive */
+@media (max-width: 576px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+    .text {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    
+}
+
+@media (min-width: 1200px) {
+    
+}
+
+@media (min-width: 1600px) {
+    
+}
